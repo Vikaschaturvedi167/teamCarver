@@ -103,6 +103,7 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
 }
 .Text{
     font-size: xxx-large;
@@ -172,6 +173,7 @@ iframe{
     background-color: #FFFF00;
     padding: 10px;
     font-weight: bold;
+    font-family: 'Urbanist', sans-serif;
 }
 .ad4 img+p{
     margin-bottom: 10px;
@@ -220,5 +222,80 @@ iframe{
     flex-direction: column;
     gap:20px;
 }
-
-
+.ad6{
+    display:flex;
+    padding: 20px;
+    gap:10px
+}
+.ad6 p{
+    width: 300px;
+}
+.ad6>div{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+.ad6>div:nth-child(1)>img{
+    width: 300px;
+}
+.ad6>div:nth-child(2){
+    width: 300px;
+    align-self: flex-start;
+}
+.ad6>div:nth-child(3)>img{
+    width: 300px;
+}
+.ad6>div:nth-child(3){
+    font-size:small;
+}
+.ad6>div:nth-child(4)>img{
+    width: 500px;
+}
+.date{
+    text-align: end;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #353535;
+    color: white;
+}
+#footer p+a{
+    margin-top:20px;
+}
+#footer a{
+    text-decoration: none;
+    color: white;
+}
+#footer input{
+    height: 40px;
+    font-family: 'Urbanist', sans-serif;
+}
+#footer button{
+    height: 40px;
+    background-color: #FFFF00;
+    font-family: 'Urbanist', sans-serif;
+}
+#footer>div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+#footer>div:nth-child(1)>div{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+#footer>div:nth-child(1)>div>input{
+    width:20px;
+}
+#footer>div:nth-child(2){
+    display: flex;
+    gap:10px;
+}
+#footer>div:nth-child(2)>div{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
