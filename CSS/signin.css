@@ -1,0 +1,52 @@
+#head{
+    text-align: center;
+    font-size: 44px;
+}
+p{
+    font-size: 26px;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#sign{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    text-align: center;
+}
+#reg{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    text-align: center;
+}
+#login_email{
+    width: 350px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #231f20;
+    font-size: 16px;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+#login_password{
+    width: 350px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #231f20;
+    font-size: 16px;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+#login{
+    padding: 30px, 50px;
+    background-color: #231f20;
+    color: #fff;
+    height: 50px;
+    width: 180px;
+}
+#register{
+    padding: 30px, 50px;
+    background-color: #231f20;
+    color: #fff;
+    height: 50px;
+    width: 180px;
+}
