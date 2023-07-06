@@ -57,7 +57,7 @@ body{
     margin-top: 200px;
 }
 .ad1img2>img{
-    width: 300px;
+    width: 400px;
     height: 400px;
     padding-right:30px;
     
@@ -81,6 +81,7 @@ body{
     justify-content: space-between;
     margin-top: 100px;
     padding: 20px;
+    margin-right:10px;
     align-items: flex-end;
 }
 .ad2product1 img{
@@ -298,4 +299,7 @@ iframe{
     display: flex;
     flex-direction: column;
     gap:10px;
+}
+@media only screen and (max-width:1200px){
+     
 }
