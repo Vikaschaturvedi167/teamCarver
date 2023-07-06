@@ -35,6 +35,22 @@ body{
     color:white;
     font-size:small;
 }
+.bar{
+     display: block;
+     width: 25px;
+     height: 3px;
+     margin: 5px auto;
+     -webkit-transition: all 0.3s ease-in-out;
+     transition: all 0.3s ease-in-out;
+     background-color: white;
+}
+#navbar .hamburger{
+    margin-left: 5px;
+    display: none;
+}
+#navbar .mobilebag{
+    display: none;
+}
 .hero>p:nth-child(1){
     font-size:26vw;
     margin: 0px;
@@ -300,6 +316,90 @@ iframe{
     flex-direction: column;
     gap:10px;
 }
+
 @media only screen and (max-width:1200px){
+    #navbar .hamburger{
+        display: block;
+     }
+    .functions{
+        display: none !important;
+     }
+    #navbar .mobilebag{
+        display: block;
+     }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+     }
+    .hamburger.active .bar:nth-child(1){
+        transform:translateY(8px) rotate(45deg);
+     }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+     }
+    .navlinks{
+        position: fixed;
+        left: -1000%;
+        top:80px;
+        gap:0px;
+        flex-direction: column;
+        background-color:#353535;
+        width: 100%;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+     }
      
+     .navlinks.active{
+        left: 0;
+        transition: 0.5s ease-in-out;
+     }
+     .ad1{
+        background-image:url(../Images/desktop-wallpaper-surf-skate-de-longboard-en-dowtow-surf-longboard.jpg);
+        align-items: center;
+        justify-content: center;
+     }
+    
+     .ad1img1,.ad1img2{
+        display: none;
+     }
+     .ad2product1{
+        flex-direction: column;
+        align-items: center;
+     }
+     .ad2product1>div{
+        flex-direction: column;
+     }
+     .ad2product1>div:first-of-type{
+        align-items: center;
+     }
+     .ad4{
+        flex-direction: column;
+        align-items: center;
+     }
+     .ad4>div{
+        flex-direction: column;
+        align-items: center;
+     }
+    .ad5{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ad5>div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ad6{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ad6>div{
+        align-self: center;
+        align-items: center;
+    }
+    #footer{
+        flex-direction: column;
+        align-items: center;
+    }
+  
+   
+
 }
