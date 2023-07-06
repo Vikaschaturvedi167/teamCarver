@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/signin.css" />
+
 </head>
 
 <body>
@@ -35,6 +36,8 @@
                     <input type="password" name="login_password" id="login_password"
                         placeholder="Enter your password">
                 </div>
+                
+
                 <button type="button" id="login" name="login" class="btn btn-success">SIGN IN</button>
             </div>
 
@@ -47,10 +50,10 @@
                     <p>Create an account with us and you'll be able to:</p>
                 </div>
                 <div>
-                    <p>Check out faster</p>
+                    <p>Save multiple shipping addressesr</p>
                 </div>
                 <div>
-                    <p>Save multiple shipping addresses</p>
+                    <p>Save items to your Wish List</p>
                 </div>
                 <div>
                     <p>Access your order history</p>
@@ -59,7 +62,7 @@
                     <p>Track new orders</p>
                 </div>
                 <div>
-                    <p>Track new orders</p>
+                    <p>Check out faster</p>
                 </div>
                 <button onclick="location.href='signup.html'" type="button" id="register" name="register"
                     class="btn-register">REGISTER</button>
@@ -68,87 +71,8 @@
     </form>
 
     
+        
+    </body>
+    </html>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-        import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
-
-        const firebaseConfig = {
-            // Your Firebase configuration
-            apiKey: "AIzaSyA49sNT_Exqha6pivnVyAjGk-6Kh8DnYKo",
-      authDomain: "authentication-543a6.firebaseapp.com",
-      projectId: "authentication-543a6",
-      storageBucket: "authentication-543a6.appspot.com",
-      messagingSenderId: "742702348989",
-      appId: "1:742702348989:web:01969e2a8215be1ee395d4"
-        };
-
-        const app = initializeApp(firebaseConfig);
-
-        const auth = getAuth();
-        const database = getDatabase();
-
-        // Check user's authentication status on page load
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // User is signed in
-                document.getElementById("logout").style.display = "block";
-                showMessage("You've been logged in your account successfully as: " + user.email);
-            } else {
-                // User is signed out
-                document.getElementById("logout").style.display = "none";
-                showMessage("");
-            }
-        });
-
-        document.getElementById("login").addEventListener("click", function () {
-            let email = document.getElementById("login_email").value;
-            let password = document.getElementById("login_password").value;
-
-            signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    const user = userCredential.user;
-                    const userRef = ref(database, "users/" + user.uid);
-                    onValue(userRef, (snapshot) => {
-                        const data = snapshot.val();
-                       // console.log(data);
-                    });
-                    alert("Login successful");
-                    document.getElementById("logout").style.display = "block";
-                    showMessage("You've been logged in your account successfully as: " + user.email);
-                })
-                .catch((error) => {
-                    const errorMessage = error.message;
-                    console.log(errorMessage);
-                    alert(errorMessage);
-                });
-        });
-
-        document.getElementById("logout").addEventListener("click", function () {
-            signOut(auth)
-                .then(() => {
-                    alert("Logged out");
-                    showMessage("You've been logged out of your account successfully.");
-                    document.getElementById("logout").style.display = "none";
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-        });
-
-        function showMessage(message) {
-            const messageTextElement = document.getElementById("message-text");
-            messageTextElement.textContent = message;
-
-            if (message) {
-                document.getElementById("message").style.display = "block";
-            } else {
-                document.getElementById("message").style.display = "none";
-            }
-        }
-    </script>
-
-</body>
-
-</html>
+    <script src="./Script/signin.js" type="module"></script>

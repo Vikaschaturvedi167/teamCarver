@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    font-size: 44px;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+input{
+    width: 500px;
+    height: 45px;
+    margin : 10px 0px;
+    background-color: #fff;
+    border: 2px solid #231f20;
+
+    border-radius: 0;
+
+}
+#country{
+    width: 507px;
+    height: 50px;
+    margin: 10px 0px;
+    background-color: #fff;
+    border: 2px solid #231f20;
+
+    border-radius: 0;
+}
+#register{
+    padding: 30px, 50px;
+    background-color: #231f20;
+    color: #fff;
+    height: 50px;
+    width: 180px;
+    margin : 0px 10px
+}
+#main > div{
+    margin: 10px;
+}
