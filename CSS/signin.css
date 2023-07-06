@@ -2,7 +2,7 @@
     text-align: center;
     font-size: 44px;
 }
-p{
+#line{
     font-size: 22px;
 }
 #main{
@@ -15,11 +15,11 @@ p{
 
 #sign{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    text-align: center;
+    
 }
 #reg{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    text-align: center;
+    
 }
 #login_email{
     width: 350px;
@@ -45,6 +45,10 @@ p{
     color: #fff;
     height: 50px;
     width: 180px;
+    margin-bottom: 100px;
+}
+#reg-button{
+    text-align: center;
 }
 #register{
     padding: 30px, 50px;
@@ -52,6 +56,9 @@ p{
     color: #fff;
     height: 50px;
     width: 180px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
 }
 #massage-signout{
     display: flex;
@@ -67,3 +74,36 @@ margin-left: 25px;
   margin-top: 35px;
 
 }
+#point{
+    margin-left: 100px;
+}
+#reg-head{
+    text-align: center;
+}
+
+        #register:hover {
+        background-color: gray;
+            cursor: pointer;
+        }
+        #login:hover {
+            background-color: gray;
+                cursor: pointer;
+            }
+            #gmail{
+                text-align: center;
+            }
+            #pass{
+                text-align: center;
+            }
+            #forget a {
+                color: #231f20;
+                margin-left: 122px;
+            }
+            #login{
+                margin-left: 122px;
+                margin-top: 15px;
+
+            }
+            #head-sign{
+                text-align: center;
+            }

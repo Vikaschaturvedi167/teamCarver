@@ -24,48 +24,41 @@
     <form action="">
         <div id="main">
             <div id="sign">
-                <div>
-                    <h1>SIGN IN</h1>
+                <div id="head-sign">
+                    <h1>SIGN IN</h1 >
                 </div>
-                <div>
+                <div id="gmail">
                     <label for="email"></label>
                     <input type="text" name="login_email" id="login_email" placeholder="Enter your email" />
                 </div>
-                <div>
+                <div  id="pass">
                     <label for="password"></label>
                     <input type="password" name="login_password" id="login_password"
                         placeholder="Enter your password">
                 </div>
-                
-
+                <div id="forget">
+                <a href="Forget Password.html">Forget password?</a>
+                 </div>
                 <button type="button" id="login" name="login" class="btn btn-success">SIGN IN</button>
             </div>
 
             <div id="reg">
-                <div>
+                <div id="reg-head">
                     <h1>REGISTER</h1>
                 </div>
 
-                <div>
-                    <p>Create an account with us and you'll be able to:</p>
-                </div>
-                <div>
-                    <p>Save multiple shipping addressesr</p>
-                </div>
-                <div>
-                    <p>Save items to your Wish List</p>
-                </div>
-                <div>
-                    <p>Access your order history</p>
-                </div>
-                <div>
-                    <p>Track new orders</p>
-                </div>
-                <div>
-                    <p>Check out faster</p>
-                </div>
+                <ul id="point">
+                    <li id="line">Create an account with us and you'll be able to:</li>
+                    <li id="line">Check out faster</li>
+                    <li id="line">Save multiple shipping addresses</li>
+                    <li id="line">Access your order history</li>
+                    <li id="line">Track new orders</li>
+                    <li id="line">Save items to your Wish List</li>
+                </ul>
+                <div id="reg-button">
                 <button onclick="location.href='signup.html'" type="button" id="register" name="register"
                     class="btn-register">REGISTER</button>
+            </div>
             </div>
         </div>
     </form>
