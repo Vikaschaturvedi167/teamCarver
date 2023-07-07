@@ -9,72 +9,72 @@ hamburger.addEventListener('click',()=>{
     navMenu.classList.toggle('active')
 })
 
-let bestSeller=[
-    {
-        image:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/380x380/products/292/2614/CARVER_PIPEWRENCH_PACKAGE__25818.1686059946.jpg?c=1",
-        desc: "CARVER PIPEWRENCH ALL-IN-ONE POCKET SKATE TOO",
-        price: "20.00"
-    },
-    {
-        image:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/600x600/products/384/2925/CARVER_C7_SPRING__65725.1686060816.jpg?c=1",
-        desc: "C7 SPRING",
-        price: "3.00"
-    },
-    {
-        image: "https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/380x380/products/484/2970/CarverTritonPrismalC52021__80035.1686061579.jpg?c=1",
-        desc: `TRITON X CARVER 32" PRISMAL SURFSKATE COMPLETE`,
-        price: "170.00"
-    },
-    {
-        image:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/380x380/products/480/2983/CarverTritonAstralC52021__84670.1685743568.jpg?c=1",
-        desc: `TRITON X CARVER 29" ASTRAL SURFSKATE COMPLETE`,
-        price: `170.00`
-    }
-];
-let obj=[{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/739/3954/2023_lost_rad_ripper_cx__43331.1686805713.jpg?c=1",
-    desc:`LOST X CARVER 31" RAD RIPPER TIE DYE SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 1,
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/732/4023/2023-yago-firegoat-c7__04627.1687997451.jpg?c=1",
-    desc:`CARVER 30.75" YAGO FIRE GOAT SURFSKATE COMPLETE C7`,
-    price: "285",
-    quantity: 1
+// let bestSeller=[
+//     {
+//         image:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/380x380/products/292/2614/CARVER_PIPEWRENCH_PACKAGE__25818.1686059946.jpg?c=1",
+//         desc: "CARVER PIPEWRENCH ALL-IN-ONE POCKET SKATE TOO",
+//         price: "20.00"
+//     },
+//     {
+//         image:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/600x600/products/384/2925/CARVER_C7_SPRING__65725.1686060816.jpg?c=1",
+//         desc: "C7 SPRING",
+//         price: "3.00"
+//     },
+//     {
+//         image: "https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/380x380/products/484/2970/CarverTritonPrismalC52021__80035.1686061579.jpg?c=1",
+//         desc: `TRITON X CARVER 32" PRISMAL SURFSKATE COMPLETE`,
+//         price: "170.00"
+//     },
+//     {
+//         image:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/380x380/products/480/2983/CarverTritonAstralC52021__84670.1685743568.jpg?c=1",
+//         desc: `TRITON X CARVER 29" ASTRAL SURFSKATE COMPLETE`,
+//         price: `170.00`
+//     }
+// ];
+// let obj=[{
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/739/3954/2023_lost_rad_ripper_cx__43331.1686805713.jpg?c=1",
+//     desc:`LOST X CARVER 31" RAD RIPPER TIE DYE SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 1,
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/732/4023/2023-yago-firegoat-c7__04627.1687997451.jpg?c=1",
+//     desc:`CARVER 30.75" YAGO FIRE GOAT SURFSKATE COMPLETE C7`,
+//     price: "285",
+//     quantity: 1
 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/741/3964/2023_lost_retro_tripper_cx__35453.1686806241.jpg?c=1",
-    desc:`LOST X CARVER 32" RETRO TRIPPER SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 2 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/737/3947/2023_lost_rnf_cx__89102.1686805096.jpg?c=1",
-    desc:`LOST X CARVER 29.5" RNF RETRO PINK SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 1 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/731/3965/2023_JOB_Tiger_Aqua_CX__27890.1686852889.jpg?c=1",
-    desc:`31" J.O.B AQUA TIGER SURFSKATE COMPLETE CX`,
-    price: "270",
-    quantity: 1 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/693/3787/CarverChrysalis2022_1000X1000__44396.1669068179.jpg?c=1",
-    desc:`CARVER 29.5" CHRYSALIS SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 5 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/702/3836/brophy_cx__20612.1686075126.jpg?c=1",
-    desc:`LOST X CARVER 32.5" ROCKET REDUX BROPHY SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 1 
-}];
-localStorage.setItem("CartData",JSON.stringify(obj));
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/741/3964/2023_lost_retro_tripper_cx__35453.1686806241.jpg?c=1",
+//     desc:`LOST X CARVER 32" RETRO TRIPPER SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 2 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/737/3947/2023_lost_rnf_cx__89102.1686805096.jpg?c=1",
+//     desc:`LOST X CARVER 29.5" RNF RETRO PINK SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 1 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/731/3965/2023_JOB_Tiger_Aqua_CX__27890.1686852889.jpg?c=1",
+//     desc:`31" J.O.B AQUA TIGER SURFSKATE COMPLETE CX`,
+//     price: "270",
+//     quantity: 1 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/693/3787/CarverChrysalis2022_1000X1000__44396.1669068179.jpg?c=1",
+//     desc:`CARVER 29.5" CHRYSALIS SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 5 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/702/3836/brophy_cx__20612.1686075126.jpg?c=1",
+//     desc:`LOST X CARVER 32.5" ROCKET REDUX BROPHY SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 1 
+// }];
+// localStorage.setItem("CartData",JSON.stringify(obj));
 let data = JSON.parse(localStorage.getItem('CartData')) || [];
 show(data);
 
@@ -219,10 +219,12 @@ function displayitems(data){
     let newdiv= document.createElement("div");
     newdiv.setAttribute("id", "newdiv");
     let topw=document.createElement("p");
-    topw.textContent="Contact Details";
     topw.setAttribute("id", "cntctdet");
+    topw.textContent="Contact Details";
+    
     let input=document.createElement("input");
     input.setAttribute("id", "input");
+    input.setAttribute("placeholder", "Enter Your Shipping Address");
 
     newdiv.append(topw,input);
 
@@ -258,9 +260,43 @@ function displayitems(data){
     let ideal= document.createElement("p");
     ideal.textContent="Ideal";
     ideal.setAttribute("id", "ideal");
-    let inpu=document.createElement("input");
-    inpu.setAttribute("placeholder","Select Your bank");
-    inpu.setAttribute("id", "inpu");
+    // let inpu=document.createElement("input");
+    // inpu.setAttribute("placeholder","Select Your bank");
+    // inpu.setAttribute("id", "inpu");
+
+
+let inpu = document.createElement("select");
+
+inpu.setAttribute("id","inpu")
+// inpu.id = "inpu";
+
+let optionValues = [
+    {value:"nodata", text: "Not Selected"},
+  { value: "access", text: "Axis Bank" },
+  { value: "citibank", text: "Citibank" },
+  { value: "diamond", text: "Diamond Bank" },
+  { value: "ecobank", text: "Ecobank" },
+  { value: "fidelity", text: "Fidelity Bank" },
+  { value:"citibank", text:"CitiBank"},
+  { value:"IDBI", text:"IDBI"},
+  { value:"bankofamerica", text:"Bank Of America"}
+
+
+
+  // Add more options here...
+];
+
+optionValues.forEach(function(option) {
+
+  let optionElement = document.createElement("option");
+
+  optionElement.value = option.value;
+  optionElement.textContent = option.text;
+
+  inpu.appendChild(optionElement);
+});
+
+
     olddiv.append(ideal,inpu);
 
     let myDiv = document.createElement("div");
@@ -322,7 +358,7 @@ function displayitems(data){
 
 
 
-    paydiv.append(pay,olddiv,myDiv,myDiv2,myDiv3,paylast);
+    paydiv.append(olddiv,myDiv,myDiv2,myDiv3,paylast);
     half1.append(payeediv,paydiv);
 
     let half2=document.createElement("div");
@@ -382,7 +418,7 @@ function displayitems(data){
 
     orderDiv.append(orderheading,orderTotal);
 
-    half2.append(paymentd,subdiv,orderDiv,shippingchrg,totalamountdiv,discountdiv);
+    half2.append(paymentd,subdiv,shippingchrg,totalamountdiv,discountdiv,orderDiv);
     main.append(half2,half1);
 
     document.getElementById("cartDisplay").append(main);
@@ -398,7 +434,7 @@ function displayitems(data){
 
     var options = {
         key: "rzp_test_9AIA8nghrvemgk",
-        amount: 1000 * 100,
+        amount: `$${sutotal}.00`,
         currency: "INR",
         name: "RAZORPAY",
         description: "PAY WITH RAZORPAY",
