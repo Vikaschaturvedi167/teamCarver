@@ -2,7 +2,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import { getDatabase, ref, set} from  "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
-
+// ........NABAR.JS CODE.............................................................................
+const hamburger=document.querySelector('.hamburger')
+const navMenu=document.querySelector('.navlinks')
+hamburger.addEventListener('click',()=>{
+    hamburger.classList.toggle('active')
+    navMenu.classList.toggle('active')
+});
 // Your Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyA49sNT_Exqha6pivnVyAjGk-6Kh8DnYKo",

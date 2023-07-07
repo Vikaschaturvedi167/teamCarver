@@ -1,6 +1,20 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+// navbar
+const hamburger=document.querySelector('.hamburger')
+const navMenu=document.querySelector('.navlinks')
+hamburger.addEventListener('click',()=>{
+    hamburger.classList.toggle('active')
+    navMenu.classList.toggle('active')
+
+
+});
+
+
+
+
+
 
 const firebaseConfig = {
     // Your Firebase configuration
