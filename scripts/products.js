@@ -44,10 +44,12 @@ let displayData=(data)=>{
         div.addEventListener('click',()=>{
            localStorage.setItem('id',item.id)
            localStorage.setItem('description',item.description)
+           localStorage.setItem('image',item.image)
+           localStorage.setItem('price',item.price)
+           localStorage.setItem('title',item.title)
+           location.href='productDetail.html'
         })
         document.querySelector('#mainitems').append(div)
     })
 }
 displayData(products)
-let items=document.getElementsByClassName('.carditem')
-for(let index of items) console.log(index)
