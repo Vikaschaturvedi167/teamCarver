@@ -37,10 +37,17 @@ let displayData=(data)=>{
         let name=document.createElement('p')
         name.textContent=item.title
         let price=document.createElement('p')
-        price.textContent=item.price
+        price.textContent='$'+item.price
         let div=document.createElement('div')
+        div.setAttribute('class','carditem')
         div.append(img,name,price)
+        div.addEventListener('click',()=>{
+           localStorage.setItem('id',item.id)
+           localStorage.setItem('description',item.description)
+        })
         document.querySelector('#mainitems').append(div)
     })
 }
 displayData(products)
+let items=document.getElementsByClassName('.carditem')
+for(let index of items) console.log(index)
