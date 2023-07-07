@@ -286,7 +286,41 @@ let button=document.createElement("button");
 button.setAttribute("id", "applybtn");
 button.textContent="APPLY";
 button.addEventListener("click",()=>{
-    document.getElementById("Pop_up").style.visibility="visible";
+    let discount="Carver25"
+    if(input.value==""){
+        let image=document.getElementById("popImage");
+        image.src=`https://www.shareicon.net/download/2016/07/07/792196_cancel_512x512.png`
+        image.style.width="60px"
+        document.getElementById("pop_message").textContent=`Please enter your coupon code.`
+        document.getElementById("Pop_up").style.visibility="visible";
+        orderTotal.textContent=`$${sutotal}.00`;
+    }
+    else if(input.value!=discount){
+        let image=document.getElementById("popImage");
+        image.src=`https://www.shareicon.net/download/2016/07/07/792196_cancel_512x512.png`
+        image.style.width="50px"
+        
+
+        
+        document.getElementById("pop_message").textContent=`The coupon code "${input.value}" you entered is not valid.`;
+        document.getElementById("Pop_up").style.visibility="visible"
+        orderTotal.textContent=`$${sutotal}.00`;
+
+    }
+    else{
+        // let payable=(subtotal/4)*3
+        let image=document.getElementById("popImage");
+        image.src=`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlerp8c9-EKQFzOdaWtOO0Ic8ZOZeXNMlrcQ&usqp=CAU`
+        image.style.width="70px"
+        
+        document.getElementById("pop_message").textContent=`Discount Coupon Applied`
+        document.getElementById("Pop_up").style.visibility="visible"
+
+        orderTotal.textContent=`$${(sutotal/4)*3}.00`
+    }
+    
+    
+
 })
 coupon.append(input,button);
 let terms=document.createElement("div");
@@ -330,10 +364,20 @@ main.append(half1,half2)
 document.getElementById("cartDisplay").append(main);
 
 
+let checkoutDiv=document.createElement("div");
 
+checkoutDiv.setAttribute("id","checkoutDiv");
+let otherdiv=document.createElement("div");
 
+let checkbtn=document.createElement("button");
+checkbtn.textContent="CHECKOUT"
 
+let checkimg=document.createElement("img");
+checkimg.src=`https://connect.bolt.com/3650567/build/images/issuer-lineup.external.svg`
+otherdiv.append(checkbtn,checkimg);
 
+checkoutDiv.append(otherdiv);
+document.getElementById("cartDisplay").append(checkoutDiv);
 
 }
 function deleted(i){
@@ -343,3 +387,8 @@ function deleted(i){
         let updatedData=JSON.parse(localStorage.getItem('CartData')) || [];
         show(updatedData);
 };
+document.getElementById("Sub_Pin").addEventListener("click",visibility);
+function visibility(){
+
+    document.getElementById("Pop_up").style.visibility="hidden";   
+}
