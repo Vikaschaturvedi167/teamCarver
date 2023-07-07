@@ -185,7 +185,7 @@ font-weight: 700;
 #half2{
     background-image: url("https://www.shutterstock.com/image-vector/grunge-rubber-stamp-word-bill-260nw-151043015.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 #half2>div{
     width: 100%;
@@ -243,6 +243,7 @@ font-weight: 700;
     font-weight: 700;
     margin-bottom: 34px;
 }
+
 #paylast{
     margin-top: 35px;
     display: flex;
@@ -259,6 +260,9 @@ font-weight: 700;
     border-radius: 8px;
     border: none;
     
+}
+#mydiv4{
+    margin-top: 40px;
 }
 #label1, #label2, #label3, #label4, #ideal, #pay{
     font-size: 18px;
@@ -306,6 +310,6 @@ font-weight: 700;
 #inpu{
     padding: 25px;
     border-radius: 8px;
-    padding: 10px 20px 10px 58px;
+    padding: 10px 20px 10px 5px;
     
 }

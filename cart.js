@@ -431,12 +431,12 @@ optionValues.forEach(function(option) {
             let updatedData=JSON.parse(localStorage.getItem('CartData')) || [];
             show(updatedData);
     };
-
+    
     var options = {
         key: "rzp_test_9AIA8nghrvemgk",
-        amount: `$${sutotal}.00`,
+        amount: 1000*100,
         currency: "INR",
-        name: "RAZORPAY",
+        name: "CARVER",
         description: "PAY WITH RAZORPAY",
         image:
           "https://blog.playo.co/wp-content/uploads/2018/04/Playo-dp-gradient4-1.png",
