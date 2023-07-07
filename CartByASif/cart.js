@@ -32,50 +32,51 @@ let bestSeller=[
         price: `170.00`
     }
 ];
-let obj=[{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/739/3954/2023_lost_rad_ripper_cx__43331.1686805713.jpg?c=1",
-    desc:`LOST X CARVER 31" RAD RIPPER TIE DYE SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 1,
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/732/4023/2023-yago-firegoat-c7__04627.1687997451.jpg?c=1",
-    desc:`CARVER 30.75" YAGO FIRE GOAT SURFSKATE COMPLETE C7`,
-    price: "285",
-    quantity: 1
+// let obj=[{
+//     img:
+//     "https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/739/3954/2023_lost_rad_ripper_cx__43331.1686805713.jpg?c=1",
+//     desc:`LOST X CARVER 31" RAD RIPPER TIE DYE SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 1,
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/732/4023/2023-yago-firegoat-c7__04627.1687997451.jpg?c=1",
+//     desc:`CARVER 30.75" YAGO FIRE GOAT SURFSKATE COMPLETE C7`,
+//     price: "285",
+//     quantity: 1
 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/741/3964/2023_lost_retro_tripper_cx__35453.1686806241.jpg?c=1",
-    desc:`LOST X CARVER 32" RETRO TRIPPER SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 2 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/737/3947/2023_lost_rnf_cx__89102.1686805096.jpg?c=1",
-    desc:`LOST X CARVER 29.5" RNF RETRO PINK SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 1 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/731/3965/2023_JOB_Tiger_Aqua_CX__27890.1686852889.jpg?c=1",
-    desc:`31" J.O.B AQUA TIGER SURFSKATE COMPLETE CX`,
-    price: "270",
-    quantity: 1 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/693/3787/CarverChrysalis2022_1000X1000__44396.1669068179.jpg?c=1",
-    desc:`CARVER 29.5" CHRYSALIS SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 5 
-},
-{
-    img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/702/3836/brophy_cx__20612.1686075126.jpg?c=1",
-    desc:`LOST X CARVER 32.5" ROCKET REDUX BROPHY SURFSKATE COMPLETE CX`,
-    price: "250",
-    quantity: 1 
-}];
-localStorage.setItem("CartData",JSON.stringify(obj));
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/741/3964/2023_lost_retro_tripper_cx__35453.1686806241.jpg?c=1",
+//     desc:`LOST X CARVER 32" RETRO TRIPPER SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 2 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/737/3947/2023_lost_rnf_cx__89102.1686805096.jpg?c=1",
+//     desc:`LOST X CARVER 29.5" RNF RETRO PINK SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 1 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/731/3965/2023_JOB_Tiger_Aqua_CX__27890.1686852889.jpg?c=1",
+//     desc:`31" J.O.B AQUA TIGER SURFSKATE COMPLETE CX`,
+//     price: "270",
+//     quantity: 1 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/693/3787/CarverChrysalis2022_1000X1000__44396.1669068179.jpg?c=1",
+//     desc:`CARVER 29.5" CHRYSALIS SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 5 
+// },
+// {
+//     img:"https://cdn11.bigcommerce.com/s-icfw6t6sn3/images/stencil/175x175/products/702/3836/brophy_cx__20612.1686075126.jpg?c=1",
+//     desc:`LOST X CARVER 32.5" ROCKET REDUX BROPHY SURFSKATE COMPLETE CX`,
+//     price: "250",
+//     quantity: 1 
+// }];
+// localStorage.setItem("CartData",JSON.stringify(obj));
 let data = JSON.parse(localStorage.getItem('CartData')) || [];
 show(data);
 
@@ -316,7 +317,7 @@ button.addEventListener("click",()=>{
         document.getElementById("pop_message").textContent=`Discount Coupon Applied`
         document.getElementById("Pop_up").style.visibility="visible"
 
-        orderTotal.textContent=`$${(sutotal/4)*3}.00`
+        orderTotal.textContent=`$${(sutotal/4)*3}`
     }
     
     
@@ -371,6 +372,9 @@ let otherdiv=document.createElement("div");
 
 let checkbtn=document.createElement("button");
 checkbtn.textContent="CHECKOUT"
+checkbtn.addEventListener("click", ()=>{
+    localStorage.setItem("PayAmount", JSON.stringify(orderTotal.textContent));
+});
 
 let checkimg=document.createElement("img");
 checkimg.src=`https://connect.bolt.com/3650567/build/images/issuer-lineup.external.svg`
@@ -391,4 +395,4 @@ document.getElementById("Sub_Pin").addEventListener("click",visibility);
 function visibility(){
 
     document.getElementById("Pop_up").style.visibility="hidden";   
-}
+};

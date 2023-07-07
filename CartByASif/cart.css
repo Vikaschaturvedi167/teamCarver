@@ -235,5 +235,69 @@ margin-top: 18px;
 
 }
 
+@media only screen and (min-width:0px) and (max-width:420px){
+    #cartDisplay>#main{
+        display:block;
+    }
+    #cartDisplay>#main>div{
+        width:100%;
+        margin: auto;
+    }
+    #checkoutDiv>div{
+        width:259px;
+        align-content: end;
+        margin: auto;
+        margin-top:20px;
+    }
+    #cartDisplay>#main>#half2>#subdiv{
+        display: flex;
+        justify-content: space-between;
+        width:90%;
+        margin: auto;
+        font:16px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        padding: 5px 20px 5px 10px;
+    }
+    #cartDisplay>#main>#half2>#orderDiv{
+            display:flex;
+            justify-content: space-between;
+            width:90%;
+            margin:auto ;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            padding: 5px 20px 5px 10px;
+    }
+    #cartDisplay>#main>#half1{
+            text-align: left;
+            font: 16px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+          width:90%;
+            color:#231f20;
+    }
+    #cartDisplay>#main>#half1>#coupon{
+     display:flex;
+     width:90%;
+    } 
+    #cartDisplay>#main>#half1>#coupon>button{
+        color:white;
+        background-color: black;
+        height:62.5px;
+        border:1px;
+        width:40%;
+        padding:20px 40px;
+    
+    }
+    #cartDisplay>#main>#half1>#coupon>input{
+        border: 2px solid black;
+        padding : 0px 12px;
+        height:59px;
+        width:60%;
+    }
+
+ }
+
 
 
