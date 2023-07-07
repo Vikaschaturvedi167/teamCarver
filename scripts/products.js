@@ -16,9 +16,10 @@ hamburger.addEventListener('click',()=>{
     navMenu.classList.toggle('active')
 })
 //!fetching data
-let fetchData=async()=>{
+let pagenumber=1
+let fetchData=async(pagenumber)=>{
     try {
-        let result=await fetch('https://shy-ruby-chimpanzee-sari.cyclic.app/products')
+        let result=await fetch(`https://shy-ruby-chimpanzee-sari.cyclic.app/products?_limit=6&_page=${pagenumber}`)
         let data=await result.json()
         products=data
         displayData(data)
@@ -30,7 +31,6 @@ fetchData()
 //!appending data
 let displayData=(data)=>{
     console.log(data)
-    document.querySelector('#mainitems').innerHTML=''
     data.forEach((item)=>{
         let img=document.createElement('img')
         img.src=item.image
@@ -53,3 +53,28 @@ let displayData=(data)=>{
     })
 }
 displayData(products)
+document.querySelector('#viewmorebutton').addEventListener('click',()=>{
+    ++pagenumber
+    if(pagenumber==3) document.querySelector('#viewmore').style.display='none'
+    fetchData(pagenumber)
+})
+document.querySelector('#sortbtn').addEventListener('click',async()=>{
+     document.querySelector('#mainitems').innerHTML=''
+     let sortValue=document.querySelector('#sortbtn').value
+     try {
+        let result=await fetch(`https://shy-ruby-chimpanzee-sari.cyclic.app/products?_limit=6&_page=${pagenumber}`)
+        let data=await result.json()
+        if(sortValue=='asc'){
+            data.sort((a,b)=>{
+                return a.price-b.price
+            })
+        }else if(sortValue=='desc'){
+            data.sort((a,b)=>{
+                return b.price-a.price
+            })
+        }  
+        displayData(data)
+    } catch (error) {
+        console.log(error)
+    }
+})

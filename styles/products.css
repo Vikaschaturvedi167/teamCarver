@@ -10,6 +10,10 @@
 .functions>div{
     display: flex;
     align-items: center;
+    gap:10px;
+}
+select{
+    font-family: 'Urbanist', sans-serif;
 }
 #mainitems{
     display: grid;
@@ -33,6 +37,21 @@ h1{
 .carditem:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
+}
+#viewmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#viewmore button{
+    border: none;
+    padding: 10px;
+    background-color: yellow;
+    font-family: 'Urbanist', sans-serif;
+}
+#sortbtn{
+    border: none;
+    background-color: white;
 }
 @media only screen and (max-width:1200px){
    #mainitems{
