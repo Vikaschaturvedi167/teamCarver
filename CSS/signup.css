@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+body,input,button{
+    font-family: 'Urbanist', sans-serif;
+}
 h1{
     text-align: center;
     font-size: 64px;

@@ -3,7 +3,7 @@ import {footer} from '../components/footer.js'
 document.querySelector('#navbar').innerHTML=navbar()
 document.querySelector('#footer').innerHTML=footer()
 document.querySelector('.logo').addEventListener('click',()=>{
-    location.href='../index.html'
+    location.href='index.html'
 })
 let cartitems=JSON.parse(localStorage.getItem('CartData')) || []
 let id=localStorage.getItem('id')

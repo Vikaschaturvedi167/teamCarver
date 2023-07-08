@@ -15,8 +15,8 @@ let navbar=()=>{
  </div>
  <div class="functions">
      <a href="">SEARCH</a>
-     <a href="">WISHLIST</a>
-     <a href="">BAG</a>
+     <a href="signinpage.html">SIGNIN</a>
+     <a href="cart.html">BAG</a>
  </div>
  <div class="mobilebag">
      <a href="">BAG</a>

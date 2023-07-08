@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+body{
+    font-family: 'Urbanist', sans-serif;
+}
 #Pop_up{
     width: 400px;
     height: 180px;

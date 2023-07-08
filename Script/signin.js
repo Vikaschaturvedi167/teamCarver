@@ -2,6 +2,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebas
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 // navbar
+document.querySelector('.logo').addEventListener('click',()=>{
+    location.href='index.html'
+})
+document.querySelector('')
 const hamburger=document.querySelector('.hamburger')
 const navMenu=document.querySelector('.navlinks')
 hamburger.addEventListener('click',()=>{

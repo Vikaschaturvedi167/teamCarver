@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap');
+body,input,button{
+    font-family: 'Urbanist', sans-serif;
+}
 #head{
     text-align: center;
     font-size: 54px;
@@ -131,7 +135,6 @@ margin-left: 25px;
                 #main {
                     display: flex;
                     flex-direction: column;
-                    text-align: center;
                 
                 }
                 div{

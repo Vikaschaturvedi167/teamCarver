@@ -1,8 +1,11 @@
 
-import {nav} from "./components/navbar.js";
-import {foot} from "./components/footer.js"
-document.getElementById("navbar").innerHTML=nav();
-document.getElementById("footer").innerHTML=foot();
+import {navbar} from "../components/navbar.js";
+import {footer} from "../components/footer.js"
+document.getElementById("navbar").innerHTML=navbar();
+document.getElementById("footer").innerHTML=footer();
+document.querySelector('.logo').addEventListener('click',()=>{
+    location.href='index.html'
+})
 const hamburger=document.querySelector('.hamburger')
 const navMenu=document.querySelector('.navlinks')
 hamburger.addEventListener('click',()=>{
@@ -78,6 +81,7 @@ let bestSeller=[
 // }];
 // localStorage.setItem("CartData",JSON.stringify(obj));
 let data = JSON.parse(localStorage.getItem('CartData')) || [];
+console.log(data)
 show(data);
 
 function show(data){
@@ -373,7 +377,12 @@ let otherdiv=document.createElement("div");
 let checkbtn=document.createElement("button");
 checkbtn.textContent="CHECKOUT"
 checkbtn.addEventListener("click", ()=>{
-    localStorage.setItem("PayAmount", JSON.stringify(orderTotal.textContent));
+    let mrinal={
+        OriginalPrice:sutotal,
+        discountedPrice:orderTotal.textContent
+    }
+    
+    localStorage.setItem("PayAmount", JSON.stringify(mrinal));
 });
 
 let checkimg=document.createElement("img");
@@ -384,8 +393,7 @@ checkoutDiv.append(otherdiv);
 document.getElementById("cartDisplay").append(checkoutDiv);
 
 }
-function deleted(i){
-        
+function deleted(i){     
         data.splice(i,1);
         localStorage.setItem("CartData", JSON.stringify(data));
         let updatedData=JSON.parse(localStorage.getItem('CartData')) || [];
@@ -396,3 +404,4 @@ function visibility(){
 
     document.getElementById("Pop_up").style.visibility="hidden";   
 };
+
