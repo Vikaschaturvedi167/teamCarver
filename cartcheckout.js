@@ -384,7 +384,7 @@ optionValues.forEach(function(option) {
     let discountis=document.createElement("p");
     discountis.textContent="Total Discount";
     let discounton= document.createElement("p");
-    discounton.textContent="0";
+    discounton.textContent="572";
     discountdiv.append(discountis,discounton);
 
     let totalamountdiv= document.createElement("div");
@@ -414,7 +414,7 @@ optionValues.forEach(function(option) {
     let orderheading=document.createElement("p");
     orderheading.textContent="Order total";
     let orderTotal=document.createElement("p"); 
-    orderTotal.textContent=`$${sutotal}.00`;
+    orderTotal.textContent=`$${sutotal-discounton}.00`;
 
     orderDiv.append(orderheading,orderTotal);
 
@@ -431,10 +431,10 @@ optionValues.forEach(function(option) {
             let updatedData=JSON.parse(localStorage.getItem('CartData')) || [];
             show(updatedData);
     };
-    
+    var amont= orderTotal;
     var options = {
         key: "rzp_test_9AIA8nghrvemgk",
-        amount: 1000*100,
+        amount: amont,
         currency: "INR",
         name: "CARVER",
         description: "PAY WITH RAZORPAY",
